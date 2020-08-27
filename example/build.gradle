@@ -1,0 +1,27 @@
+plugins {
+    id 'application'
+}
+
+apply plugin : "java"
+
+ext {
+    javaMainClass = "com.adonmo.meos.example.Main"
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+
+}
+
+dependencies {
+    compile project(':javameos')
+    compile group: 'org.bytedeco', name: 'javacpp', version: "1.5.3"
+    compile group: 'org.bytedeco', name: 'javacpp-platform', version: "1.5.3"
+}
+
+application {
+    mainClassName = javaMainClass
+}

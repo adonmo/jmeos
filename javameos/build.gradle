@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+    id 'org.bytedeco.gradle-javacpp-build' version "${javacppVersion}"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.bytedeco', name: 'javacpp', version: "1.5.3"
+    compile group: 'org.bytedeco', name: 'javacpp-platform', version: "1.5.3"
+}
+
+tasks.withType(org.bytedeco.gradle.javacpp.BuildTask) {
+    includePath = ["$buildDir/$javacppPlatform/include"]
+    linkPath = ["$buildDir/$javacppPlatform/lib"]
+}
