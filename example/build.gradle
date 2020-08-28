@@ -18,8 +18,8 @@ configurations {
 
 dependencies {
     compile project(':javameos')
-    compile group: 'org.bytedeco', name: 'javacpp', version: "1.5.3"
-    compile group: 'org.bytedeco', name: 'javacpp-platform', version: "1.5.3"
+    compile group: 'org.bytedeco', name: 'javacpp', version: "${javacppVersion}"
+    compile group: 'org.bytedeco', name: 'javacpp-platform', version: "${javacppVersion}"
 }
 
 application {

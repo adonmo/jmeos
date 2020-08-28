@@ -1,6 +1,9 @@
 plugins {
     id 'java-library'
-    id 'org.bytedeco.gradle-javacpp-build' version "${javacppVersion}"
+
+    // Ideally below version should match $javacppVersion
+    // But right now this is the only version available
+    id 'org.bytedeco.gradle-javacpp-build' version "1.5.4-SNAPSHOT"
 }
 
 repositories {
@@ -8,11 +11,6 @@ repositories {
 }
 
 dependencies {
-    compile group: 'org.bytedeco', name: 'javacpp', version: "1.5.3"
-    compile group: 'org.bytedeco', name: 'javacpp-platform', version: "1.5.3"
-}
-
-tasks.withType(org.bytedeco.gradle.javacpp.BuildTask) {
-    includePath = ["$buildDir/$javacppPlatform/include"]
-    linkPath = ["$buildDir/$javacppPlatform/lib"]
+    compile group: 'org.bytedeco', name: 'javacpp', version: "${javacppVersion}"
+    compile group: 'org.bytedeco', name: 'javacpp-platform', version: "${javacppVersion}"
 }
