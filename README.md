@@ -9,7 +9,7 @@ The code is structured as two modules:
   1. jmeos: provides java bindings to MEOS.
   2. example: a minimal java application showing usage of jMEOS.
 
-## Sample code
+## Sample code for projects using jMEOS
 
 Following snipped is from example module's main function:
 ```java
@@ -20,7 +20,7 @@ System.out.println(tbox.xmax());
 System.out.println(tbox.tmax().toString());
 ```
 
-## Running the code
+## Running the example code
 Use IntelliJ Idea, build and run the example module with following run configuration:
 ```
 -Djava.library.path=<path to jmeos repository>/jmeos/build/classes/java/main/com/adonmo/meos/linux-x86_64
@@ -33,4 +33,9 @@ If you see output similar to this, the code ran successfully:
 2020-08-28 11:13:13.674
 20.0
 2020-08-28 11:13:13.677
+```
+
+## Running test for the library
+```
+./gradlew test
 ```

@@ -11,6 +11,18 @@ repositories {
 }
 
 dependencies {
+    // javacpp dependencies
     compile group: 'org.bytedeco', name: 'javacpp', version: "${javacppVersion}"
     compile group: 'org.bytedeco', name: 'javacpp-platform', version: "${javacppVersion}"
+
+    // test dependencies
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed", "standardOut", "standardError"
+    }
 }

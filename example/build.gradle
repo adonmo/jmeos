@@ -12,10 +12,6 @@ repositories {
     mavenCentral()
 }
 
-configurations {
-
-}
-
 dependencies {
     compile project(':jmeos')
     compile group: 'org.bytedeco', name: 'javacpp', version: "${javacppVersion}"
