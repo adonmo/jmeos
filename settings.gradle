@@ -5,5 +5,5 @@ pluginManagement {
     }
 }
 
-include 'javameos'
+include 'jmeos'
 include 'example'

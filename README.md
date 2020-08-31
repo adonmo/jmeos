@@ -1,4 +1,4 @@
-# MEOS-java
+# jMEOS
 
 A minimal proof of concept for using MEOS in Java.
 
@@ -6,8 +6,8 @@ We use JavaCpp to achieve this.
 
 The code is structured as two modules:
 
-  1. javameos: provides java bindings to MEOS.
-  2. example: a minimal java application showing usage of javameos.
+  1. jmeos: provides java bindings to MEOS.
+  2. example: a minimal java application showing usage of jMEOS.
 
 ## Sample code
 
@@ -23,8 +23,9 @@ System.out.println(tbox.tmax().toString());
 ## Running the code
 Use IntelliJ Idea, build and run the example module with following run configuration:
 ```
--Djava.library.path=/home/kc/Adonmo/code/meos-java/javameos/build/classes/java/main/com/adonmo/meos/linux-x86_64
+-Djava.library.path=<path to jmeos repository>/jmeos/build/classes/java/main/com/adonmo/meos/linux-x86_64
 ```
+Note: Make sure to give absolute path when adding <path to jmeos repository>
 
 If you see output similar to this, the code ran successfully:
 ```

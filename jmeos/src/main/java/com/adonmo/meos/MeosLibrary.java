@@ -30,8 +30,6 @@ public class MeosLibrary extends com.adonmo.meos.MeosLibraryConfig {
     @Override public TBox position(long position) {
         return (TBox)super.position(position);
     }
-
-    // We need to comment out below because it available in only javacppVersion >= 1.5.4-SNAPSHOT
 //    @Override public TBox getPointer(long i) {
 //        return new TBox(this).position(position + i);
 //    }
