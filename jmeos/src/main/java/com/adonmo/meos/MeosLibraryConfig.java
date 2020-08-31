@@ -8,11 +8,11 @@ import org.bytedeco.javacpp.tools.InfoMapper;
 
 @Properties(
     value = @Platform(
-        includepath = {"/home/kc/Adonmo/code/meos/include"},
+        includepath = {"./../meos/include"},
         include = {
             "meos/types/box/TBox.hpp",
         },
-        linkpath = {"/home/kc/Adonmo/code/meos/build/test/_deps/libmeos-build"},
+        linkpath = {"./../meos/build"},
         link = {"meos"}
     ),
     global = "com.adonmo.meos.MeosLibrary"

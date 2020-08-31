@@ -25,7 +25,9 @@ Use IntelliJ Idea, build and run the example module with following run configura
 ```
 -Djava.library.path=<path to jmeos repository>/jmeos/build/classes/java/main/com/adonmo/meos/linux-x86_64
 ```
-Note: Make sure to give absolute path when adding <path to jmeos repository>
+Note:
+  - Make sure to give absolute path when adding <path to jmeos repository>
+  - You would also need to have libmeos.a built before running this
 
 If you see output similar to this, the code ran successfully:
 ```
@@ -36,6 +38,16 @@ If you see output similar to this, the code ran successfully:
 ```
 
 ## Running test for the library
+Make sure you have libmeos.a binary setup, and do:
 ```
 ./gradlew test
+```
+
+## Building libmeos.a
+To build/test jMEOS, you also need to build the libmeos.a binary
+```
+cd ../meos
+git clone https://github.com/adonmo/meos --depth=1
+cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
+cmake --build build --config Release
 ```
